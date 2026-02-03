@@ -1,12 +1,26 @@
+"use client"
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
-import { prisma } from "@beacon/database";
 
-export default async function Home() {
-  const user = await prisma.user.findFirst();
+const Home = () => {
+
+  const [name, setName] = useState<string | undefined>();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/getName`);
+
+      return await response.json();
+    }
+
+    fetchData().then((res) => setName(res.name));
+  }, []);
 
   return (
     <div className={styles.page}>
-      {user?.name ?? "No user added yet"}
+      Name: {name ?? "No user added yet"}
     </div>
   );
 }
+
+export default Home;
