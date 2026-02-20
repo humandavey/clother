@@ -39,6 +39,7 @@ model Clothing {
   name         String
   type         ClothingType
   description  String
+  imageUrl     String
 
   userId  String
   user    User    @relation(fields: [userId], references: [id])
