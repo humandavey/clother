@@ -1,5 +1,5 @@
 {
-  "extends": "@beacon/typescript-config/nextjs.json",
+  "extends": "@clother/typescript-config/nextjs.json",
   "compilerOptions": {
     "plugins": [
       {

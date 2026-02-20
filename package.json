@@ -1,5 +1,5 @@
 {
-  "name": "beacon",
+  "name": "clother",
   "private": true,
   "scripts": {
     "build": "turbo run build",

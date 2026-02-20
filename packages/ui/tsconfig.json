@@ -1,5 +1,5 @@
 {
-  "extends": "@beacon/typescript-config/react-library.json",
+  "extends": "@clother/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist"
   },

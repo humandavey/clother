@@ -1,5 +1,5 @@
 {
-  "name": "@beacon/web",
+  "name": "@clother/web",
   "version": "0.1.0",
   "type": "module",
   "private": true,
@@ -11,14 +11,14 @@
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@beacon/ui": "workspace:*",
+    "@clother/ui": "workspace:*",
     "next": "16.1.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@beacon/eslint-config": "workspace:*",
-    "@beacon/typescript-config": "workspace:*",
+    "@clother/eslint-config": "workspace:*",
+    "@clother/typescript-config": "workspace:*",
     "@types/node": "^22.15.3",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",

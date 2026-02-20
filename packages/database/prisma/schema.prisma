@@ -7,81 +7,39 @@ datasource db {
   provider = "postgresql"
 }
 
+enum ClothingType {
+  HAT
+  SHIRT
+  OVERSHIRT
+  JACKET
+  WATCH
+  BELT
+  SHORTS
+  PANTS
+  SOCKS
+  SHOES
+}
+
+enum AccountType {
+  MAX
+  PRO
+  DEFAULT
+}
+
 model User {
-  id        String   @id @default(cuid())
-  name      String
-  email     String
-  createdAt DateTime @default(now())
-
-  memberships Membership[]
-  messages    Message[]
+  id           String  @id @default(uuid())
+  name         String
+  accountType  AccountType @default(DEFAULT)
+  
+  clothing Clothing[]
 }
 
-model Workspace {
-  id        String       @id @default(cuid())
-  name      String
-  createdAt DateTime     @default(now())
-  members   Membership[]
-  channels  Channel[]
-  invites   Invitation[]
-}
+model Clothing {
+  id           String  @id @default(uuid())
+  name         String
+  type         ClothingType
+  description  String
 
-model Membership {
-  id       String   @id @default(cuid())
-  role     Role     @default(MEMBER)
-  joinedAt DateTime @default(now())
-
-  userId      String
-  workspaceId String
-
-  user      User      @relation(fields: [userId], references: [id])
-  workspace Workspace @relation(fields: [workspaceId], references: [id])
-
-  @@unique([userId, workspaceId])
-}
-
-enum Role {
-  OWNER
-  ADMIN
-  MEMBER
-}
-
-model Channel {
-  id   String      @id @default(cuid())
-  name String
-  type ChannelType @default(TEXT)
-
-  workspaceId String
-  workspace   Workspace @relation(fields: [workspaceId], references: [id])
-
-  messages Message[]
-}
-
-enum ChannelType {
-  TEXT
-  VOICE
-  DM
-}
-
-model Message {
-  id        String   @id @default(cuid())
-  content   String
-  createdAt DateTime @default(now())
-
-  userId    String
-  channelId String
-
+  userId  String
   user    User    @relation(fields: [userId], references: [id])
-  channel Channel @relation(fields: [channelId], references: [id])
-}
-
-model Invitation {
-  id        String   @id @default(cuid())
-  email     String
-  role      Role     @default(MEMBER)
-  token     String   @unique
-  expiresAt DateTime
-
-  workspaceId String
-  workspace   Workspace @relation(fields: [workspaceId], references: [id])
 }

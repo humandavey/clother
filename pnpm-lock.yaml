@@ -20,7 +20,7 @@ importers:
 
   apps/api:
     dependencies:
-      '@beacon/database':
+      '@clother/database':
         specifier: workspace:*
         version: link:../../packages/database
       cors:
@@ -30,10 +30,10 @@ importers:
         specifier: ^5.2.1
         version: 5.2.1
     devDependencies:
-      '@beacon/eslint-config':
+      '@clother/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@beacon/typescript-config':
+      '@clother/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/cors':
@@ -51,7 +51,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@beacon/ui':
+      '@clother/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       next:
@@ -64,10 +64,10 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@beacon/eslint-config':
+      '@clother/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@beacon/typescript-config':
+      '@clother/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/node':
@@ -101,7 +101,7 @@ importers:
         specifier: ^8.18.0
         version: 8.18.0
     devDependencies:
-      '@beacon/typescript-config':
+      '@clother/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@types/node':
@@ -164,10 +164,10 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
     devDependencies:
-      '@beacon/eslint-config':
+      '@clother/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@beacon/typescript-config':
+      '@clother/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@types/node':

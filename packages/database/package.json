@@ -1,5 +1,5 @@
 {
-  "name": "@beacon/database",
+  "name": "@clother/database",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -16,7 +16,7 @@
     }
   },
   "devDependencies": {
-    "@beacon/typescript-config": "workspace:*",
+    "@clother/typescript-config": "workspace:*",
     "@types/node": "^22.15.3",
     "@types/pg": "^8.16.0",
     "prisma": "^7.3.0",

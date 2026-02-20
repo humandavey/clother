@@ -1,5 +1,5 @@
 {
-  "extends": "@beacon/typescript-config/base.json",
+  "extends": "@clother/typescript-config/base.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "."

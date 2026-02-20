@@ -18,9 +18,9 @@ This Turborepo includes the following packages/apps:
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
-- `@beacon/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@beacon/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@beacon/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@clother/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@clother/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@clother/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 

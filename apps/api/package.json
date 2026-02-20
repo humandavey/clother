@@ -1,5 +1,5 @@
 {
-  "name": "@beacon/api",
+  "name": "@clother/api",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
@@ -10,13 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@beacon/database": "workspace:*",
+    "@clother/database": "workspace:*",
     "cors": "^2.8.6",
     "express": "^5.2.1"
   },
   "devDependencies": {
-    "@beacon/eslint-config": "workspace:*",
-    "@beacon/typescript-config": "workspace:*",
+    "@clother/eslint-config": "workspace:*",
+    "@clother/typescript-config": "workspace:*",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^22.15.3",
